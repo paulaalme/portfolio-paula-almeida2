@@ -1,0 +1,889 @@
+/*
+ * Estudos de caso.
+ * Todas as classes usam o prefixo "case-" para não afetar a página principal.
+ * A página principal continua usando somente css/styles.css.
+ */
+
+/* ---------- Estrutura ---------- */
+
+.case-wrap {
+  /* 1136px de conteúdo centralizado no desktop (152px de margem em 1440px) */
+  padding-inline: max(20px, calc(50% - 568px));
+}
+
+.case-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-top: 56px;
+}
+
+.case-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.case-back img {
+  width: 16px;
+  height: 16px;
+}
+
+.case-back:hover {
+  color: var(--color-ink);
+}
+
+.case-eyebrow-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.case-eyebrow-row .tags {
+  margin-top: 0;
+}
+
+.case-eyebrow {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.case-title {
+  max-width: 960px;
+  font-family: var(--font-serif);
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.9px;
+}
+
+.case-lead {
+  max-width: 710px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  width: 100%;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+}
+
+.case-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.case-label {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.case-value {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.case-note-line {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.case-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  padding: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.case-summary__title {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -0.08px;
+}
+
+.case-summary__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.case-summary__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.case-summary__label {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-accent);
+}
+
+.case-summary__text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------- Seções numeradas ---------- */
+
+.case-section {
+  padding-top: 64px;
+}
+
+.case-section__grid {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 44px;
+  border-top: 1px solid var(--color-border);
+}
+
+.case-section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  width: 268px;
+  padding-right: 24px;
+}
+
+.case-section__num {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-accent);
+}
+
+.case-section__title {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.17px;
+}
+
+.case-section__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.case-heading {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.08px;
+}
+
+.case-statement {
+  max-width: 780px;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: -0.05px;
+}
+
+.case-text {
+  max-width: 760px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.case-caption {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.case-note {
+  width: 760px;
+  max-width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Último bloco do Case 2: no Figma, a seção 08 começa 90px abaixo */
+.case-section--final {
+  padding-top: 90px;
+}
+
+/* Espaçadores verticais, com a altura do Figma */
+.case-gap-10 { height: 10px; }
+.case-gap-12 { height: 12px; }
+.case-gap-14 { height: 14px; }
+.case-gap-16 { height: 16px; }
+.case-gap-20 { height: 20px; }
+.case-gap-24 { height: 24px; }
+.case-gap-28 { height: 28px; }
+.case-gap-32 { height: 32px; }
+.case-gap-40 { height: 40px; }
+.case-gap-48 { height: 48px; }
+.case-gap-56 { height: 56px; }
+
+/* Caixas de imagem e embed: a altura vem de variáveis definidas no HTML */
+.case-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--h-desk);
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-placeholder);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.case-embed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: var(--h-desk);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.case-embed__title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.case-embed__text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* Objetivos e listas numeradas */
+.case-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 40px;
+  width: 100%;
+}
+
+.case-numbered {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.case-numbered__num {
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--color-accent);
+}
+
+.case-numbered__text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Etapas do processo */
+.case-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 32px;
+  width: 100%;
+}
+
+.case-step {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 268px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.case-step__num {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.case-step__title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.07px;
+}
+
+.case-step__text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* Abas (estáticas, como no design) */
+.case-tabs {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.case-tab {
+  padding: 12px 18px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.case-tab--active {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-on-ink);
+}
+
+/* Galeria de imagens do quadro de oportunidades */
+.case-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 164px);
+  gap: 12px;
+}
+
+.case-gallery .case-placeholder {
+  width: 164px;
+  height: var(--h-desk);
+}
+
+/* Cartões de responsabilidades */
+.case-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+}
+
+.case-card__title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.case-card__text {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Citação e lista de teste com usuários */
+.case-quote {
+  max-width: 760px;
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.case-attribution {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Entregas */
+.case-deliveries {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 40px;
+  width: 100%;
+}
+
+.case-delivery {
+  padding: 14px 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Cronometragem */
+.case-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.case-metric {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+}
+
+.case-metric__group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.case-metric__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-metric__row-label {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.case-metric__value {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -0.08px;
+  white-space: nowrap;
+}
+
+.case-metric__total {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.case-metric__total-label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.case-metric__total-value {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.case-metrics-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+/* Rodapé de página de caso */
+.case-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 0 24px;
+}
+
+/* ---------- Mobile (até 899px) ---------- */
+
+@media (max-width: 899px) {
+  .case-wrap {
+    padding-inline: 20px;
+  }
+
+  .case-intro {
+    gap: 20px;
+    padding-top: 40px;
+  }
+
+  .case-eyebrow-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .case-eyebrow {
+    white-space: normal;
+  }
+
+  .case-title {
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.34px;
+  }
+
+  .case-lead {
+    font-size: 16px;
+  }
+
+  .case-meta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding-top: 24px;
+  }
+
+  .case-value {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .case-summary {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .case-summary__title {
+    font-size: 22px;
+  }
+
+  .case-summary__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .case-summary__text {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .case-section,
+  .case-section--final {
+    padding-top: 56px;
+  }
+
+  .case-section__grid {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+  }
+
+  .case-section__head {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .case-section__title {
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+
+  .case-section__body {
+    width: 100%;
+  }
+
+  .case-heading {
+    font-size: 22px;
+  }
+
+  .case-statement {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  .case-text {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .case-note {
+    width: 100%;
+  }
+
+  .case-placeholder {
+    height: var(--h-mob);
+  }
+
+  .case-embed {
+    height: var(--h-mob);
+  }
+
+  .case-grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .case-numbered {
+    width: 100%;
+    padding: 18px 0;
+  }
+
+  .case-numbered__text {
+    font-size: 14px;
+  }
+
+  .case-steps {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .case-step {
+    width: 100%;
+    padding: 16px 0 24px;
+  }
+
+  .case-step__title {
+    font-size: 20px;
+  }
+
+  .case-tabs {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .case-tab {
+    padding: 8px;
+  }
+
+  .case-gallery {
+    grid-template-columns: repeat(2, 169px);
+    gap: 12px;
+  }
+
+  .case-gallery .case-placeholder {
+    width: 169px;
+    height: var(--h-mob);
+  }
+
+  .case-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .case-card {
+    padding: 20px;
+  }
+
+  .case-card__title {
+    font-size: 20px;
+    white-space: normal;
+  }
+
+  .case-quote {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .case-deliveries {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .case-metrics {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .case-metric {
+    padding: 20px;
+  }
+
+  .case-metric__value {
+    font-size: 22px;
+  }
+
+  .case-metric__total-value {
+    font-size: 32px;
+  }
+}
+
+/* ---------- Case 1: artefatos de UX ---------- */
+
+/* Wireframe da seção Problema: mantém a proporção original */
+.case-figure {
+  width: 100%;
+  margin: 0;
+}
+
+.case-figure__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+/* Embeds do FigJam: proporção de referência 800 × 450 */
+.case-figma {
+  width: 100%;
+  aspect-ratio: 800 / 450;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.case-figma iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Abas que agora são botões de verdade */
+.case-tabs .case-tab {
+  background: transparent;
+  color: var(--color-ink);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.case-tabs .case-tab--active {
+  background: var(--color-ink);
+  color: var(--color-on-ink);
+}
+
+.case-tabs .case-tab:hover:not(.case-tab--active) {
+  border-color: var(--color-ink);
+}
+
+/* Galeria de imagens do quadro de oportunidades */
+.case-gallery--photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Todas as miniaturas têm a mesma proporção (4:3) e são preenchidas pela imagem, com corte se necessário */
+.case-gallery__item {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-placeholder);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.case-gallery__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-gallery__item:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Lightbox: <dialog> nativo, com fundo escuro e imagem sem cortes */
+.case-lightbox {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.case-lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-lightbox::backdrop {
+  background: rgba(20, 19, 24, 0.88);
+}
+
+.case-lightbox__img {
+  display: block;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: default;
+}
+
+.case-lightbox__close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.case-lightbox__close:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+html.case-lightbox-open {
+  overflow: hidden;
+}
+
+@media (max-width: 899px) {
+  .case-gallery--photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}

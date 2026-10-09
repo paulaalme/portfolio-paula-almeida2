@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudo de caso 2 · Sistema de gestão · Paula Almeida</title>
+  <meta name="description" content="Estudo de caso: sistema de rastreabilidade e gestão de lavagens de stencils.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/cases.css">
+</head>
+<body>
+
+  <div class="site-header-wrap">
+  <header class="site-header">
+    <a class="brand" href="../index.html" aria-label="Paula Almeida, Product Designer">
+      <span class="brand__name">Paula Almeida</span>
+      <span class="brand__role">Product Designer</span>
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="Principal">
+      <a href="../index.html#projetos">Projetos</a>
+      <a href="../index.html#como-eu-trabalho">Como eu trabalho</a>
+      <a href="../index.html#sobre">Sobre</a>
+      <a href="../index.html#contato">Contato</a>
+      <a class="btn btn--outline btn--small" href="https://fax-slaw-64623266.figma.site/" target="_blank" rel="noopener noreferrer">
+        Currículo
+        <img src="../assets/icons/desktop-cv-small.svg" alt="" width="16" height="16" aria-hidden="true">
+      </a>
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+      <img src="../assets/icons/mobile-menu.svg" alt="" width="16" height="16" aria-hidden="true">
+    </button>
+  </header>
+  </div>
+
+  <main id="topo">
+
+    <div class="case-wrap">
+
+      <section class="case-intro" aria-labelledby="case-title">
+        <a class="case-back" href="../index.html#projetos">
+          <img src="../assets/icons/link-back.svg" alt="" width="16" height="16" aria-hidden="true">
+          Todos os projetos
+        </a>
+
+        <div class="case-eyebrow-row">
+          <p class="case-eyebrow">Etapa 2 de 2 · Desenhar o sistema</p>
+          <div class="tags">
+            <span class="tag">UX/UI Design</span>
+            <span class="tag">Testes com usuários</span>
+          </div>
+        </div>
+
+        <h1 class="case-title" id="case-title">Sistema de gestão para controle e rastreabilidade de lavagens de stencils</h1>
+
+        <p class="case-lead">Uma plataforma de rastreabilidade para substituir o sistema legado do cliente. Cada etapa do ciclo do stencil ganhou um responsável, e o fluxo mudou depois de testes com usuários.</p>
+
+        <div class="case-meta">
+          <div class="case-meta__item">
+            <p class="case-label">Meu papel</p>
+            <p class="case-value">UX Designer / Product Designer</p>
+          </div>
+          <div class="case-meta__item">
+            <p class="case-label">Equipe</p>
+            <p class="case-value">1 Product Designer, 1 Product Owner, 2 Desenvolvedores</p>
+          </div>
+          <div class="case-meta__item">
+            <p class="case-label">Duração</p>
+            <p class="case-value">[Duração atualizada]</p>
+          </div>
+          <div class="case-meta__item">
+            <p class="case-label">Status</p>
+            <p class="case-value">[Status do projeto]</p>
+          </div>
+        </div>
+
+        <p class="case-note-line">Manufatura eletrônica · Projeto sob NDA: dados e telas anonimizados.</p>
+
+        <div class="case-placeholder" style="--h-desk: 422px; --h-mob: 210px;" role="img" aria-label="Imagem principal: tela de registro ou Dashboard do novo sistema">[Imagem principal — tela de registro ou Dashboard do novo sistema]</div>
+        <p class="case-caption">Fig. 01 — [Legenda da imagem principal]</p>
+
+        <div class="case-summary">
+          <p class="case-summary__title">Em resumo</p>
+          <div class="case-summary__grid">
+            <div class="case-summary__item">
+              <p class="case-summary__label">Problema</p>
+              <p class="case-summary__text">No sistema legado, só a lavagem era registrada. O resto do ciclo do stencil não tinha rastreio nem dono.</p>
+            </div>
+            <div class="case-summary__item">
+              <p class="case-summary__label">Meu papel</p>
+              <p class="case-summary__text">Fluxos, regras de comportamento, protótipo e testes com usuários.</p>
+            </div>
+            <div class="case-summary__item">
+              <p class="case-summary__label">Decisão-chave</p>
+              <p class="case-summary__text">Os operadores resistiram ao novo registro de saída. Mudamos o fluxo: ao bipar a etiqueta, o sistema já sabe qual registro abrir.</p>
+            </div>
+            <div class="case-summary__item">
+              <p class="case-summary__label">Resultado</p>
+              <p class="case-summary__text">Uma etapa nova de rastreabilidade (o registro de saída leva 12 s) e um cadastro completo, com etiqueta, em 1 min 50 s. No sistema legado, só o cadastro levava 2 min 04 s.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 Contexto -->
+      <section class="case-section" aria-labelledby="c2-contexto">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">01</span>
+            <h2 class="case-section__title" id="c2-contexto">Contexto</h2>
+          </div>
+          <div class="case-section__body">
+            <p class="case-text">Depois do Discovery, o projeto virou uma plataforma de rastreabilidade de stencils para substituir o sistema que o cliente já usava. Ele continuou, ganhou funcionalidades novas e passou por dois testes com usuários.</p>
+            <div class="case-gap-32"></div>
+            <p class="case-note">Neste case, “sistema legado” é o sistema que o cliente usava antes. “Novo sistema” é a plataforma desenvolvida neste projeto.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 Problema -->
+      <section class="case-section" aria-labelledby="c2-problema">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">02</span>
+            <h2 class="case-section__title" id="c2-problema">Problema</h2>
+          </div>
+          <div class="case-section__body">
+            <p class="case-statement">O sistema legado registrava apenas a lavagem. O resto do ciclo do stencil não tinha rastreabilidade nem um responsável definido.</p>
+            <div class="case-gap-24"></div>
+            <p class="case-text">O cadastro também era dividido: um sistema para cadastrar o stencil, outro para imprimir a etiqueta, e um código que a pessoa precisava saber montar de cabeça.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 Responsabilidades -->
+      <section class="case-section" aria-labelledby="c2-responsabilidades">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">03</span>
+            <h2 class="case-section__title" id="c2-responsabilidades">Responsabilidades</h2>
+          </div>
+          <div class="case-section__body">
+            <p class="case-statement">Cada etapa do processo passou a ter um perfil responsável.</p>
+            <div class="case-gap-28"></div>
+            <div class="case-cards">
+              <div class="case-card">
+                <h3 class="case-card__title">Operação</h3>
+                <p class="case-card__text">Registra a lavagem e a saída do stencil para a linha de produção.</p>
+              </div>
+              <div class="case-card">
+                <h3 class="case-card__title">Controle de Qualidade</h3>
+                <p class="case-card__text">Entrou no fluxo agora. Faz a vistoria: valida stencils novos e revalida quando há avaria.</p>
+              </div>
+              <div class="case-card">
+                <h3 class="case-card__title">Engenharia</h3>
+                <p class="case-card__text">Cadastra stencils, define parâmetros de vida útil e gerencia os usuários.</p>
+              </div>
+            </div>
+            <div class="case-gap-28"></div>
+            <p class="case-text">O que antes não tinha rastreio nem dono passou a seguir um fluxo, e cada registro fica ligado ao perfil e à pessoa que o fez.</p>
+            <div class="case-gap-28"></div>
+            <div class="case-placeholder" style="--h-desk: 470px; --h-mob: 188px;" role="img" aria-label="Fluxo do ciclo do stencil por perfil">[Fluxo do ciclo do stencil por perfil]</div>
+            <div class="case-gap-12"></div>
+            <p class="case-caption">Fig. 02 — Ciclo do stencil e perfil responsável por cada etapa</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 Teste com usuários -->
+      <section class="case-section" aria-labelledby="c2-teste">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">04</span>
+            <h2 class="case-section__title" id="c2-teste">Teste com usuários</h2>
+          </div>
+          <div class="case-section__body">
+            <h3 class="case-heading">O que ouvimos</h3>
+            <div class="case-gap-20"></div>
+            <blockquote class="case-quote">“Isso não vai tornar o nosso processo mais complexo? Hoje fazemos apenas um registro (o de lavagem).”</blockquote>
+            <div class="case-gap-10"></div>
+            <p class="case-attribution">— Operadores, no primeiro teste com usuários</p>
+            <div class="case-gap-28"></div>
+            <p class="case-text">A saída precisava ser registrada para a rastreabilidade funcionar. Mas, do jeito que propusemos, parecia mais trabalho para quem faz esse processo todo dia.</p>
+            <div class="case-gap-48"></div>
+            <h3 class="case-heading">O que mudou</h3>
+            <div class="case-gap-20"></div>
+            <p class="case-text">Mudamos as regras de comportamento do perfil de Operação e o fluxo de registro para a etapa extra dar o mínimo de trabalho:</p>
+            <div class="case-gap-20"></div>
+            <div class="case-grid-2">
+              <div class="case-numbered"><span class="case-numbered__num">1</span><p class="case-numbered__text">Ao bipar a etiqueta, o sistema identifica em que etapa o stencil está e abre direto a janela certa: lavagem ou saída.</p></div>
+              <div class="case-numbered"><span class="case-numbered__num">2</span><p class="case-numbered__text">Ao escolher a linha, o técnico responsável é preenchido automaticamente.</p></div>
+              <div class="case-numbered"><span class="case-numbered__num">3</span><p class="case-numbered__text">O operador é selecionado em uma lista com os nomes, sem digitação.</p></div>
+            </div>
+            <div class="case-gap-28"></div>
+            <div class="case-placeholder" style="--h-desk: 536px; --h-mob: 214px;" role="img" aria-label="Registro pela etiqueta: janela de lavagem e janela de saída">[Registro pela etiqueta: janela de lavagem e janela de saída]</div>
+            <div class="case-gap-12"></div>
+            <p class="case-caption">Fig. 03 — Registro iniciado pela leitura da etiqueta</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 Validação -->
+      <section class="case-section" aria-labelledby="c2-validacao">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">05</span>
+            <h2 class="case-section__title" id="c2-validacao">Validação</h2>
+          </div>
+          <div class="case-section__body">
+            <p class="case-text">No segundo teste, cronometramos o registro no sistema legado do cliente e no novo sistema.</p>
+            <div class="case-gap-24"></div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <div class="case-metric__group">
+                  <p class="case-summary__label">Sistema legado</p>
+                  <div class="case-metric__row"><span class="case-metric__row-label">Registro de lavagem</span><span class="case-metric__value">34 s</span></div>
+                </div>
+                <div class="case-metric__total"><span class="case-metric__total-label">Total</span><span class="case-metric__total-value">34 s</span></div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric__group">
+                  <p class="case-summary__label">Novo sistema</p>
+                  <div class="case-metric__row"><span class="case-metric__row-label">Registro de lavagem</span><span class="case-metric__value">38 s</span></div>
+                  <div class="case-metric__row"><span class="case-metric__row-label">Registro de saída</span><span class="case-metric__value">12 s</span></div>
+                </div>
+                <div class="case-metric__total"><span class="case-metric__total-label">Total</span><span class="case-metric__total-value">50 s</span></div>
+              </div>
+            </div>
+            <div class="case-gap-28"></div>
+            <p class="case-text">O novo sistema não ficou mais rápido, e nem teria como: agora são dois registros em vez de um. A lavagem ficou 4 segundos mais lenta, e a saída, que antes não era registrada, leva 12 segundos.</p>
+            <div class="case-gap-32"></div>
+            <p class="case-note">No sistema legado, o tempo foi contado do login até o clique em “Registrar”.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 Cadastro -->
+      <section class="case-section" aria-labelledby="c2-cadastro">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">06</span>
+            <h2 class="case-section__title" id="c2-cadastro">Cadastro</h2>
+          </div>
+          <div class="case-section__body">
+            <div class="case-cards">
+              <div class="case-card">
+                <h3 class="case-card__title">Sistema legado</h3>
+                <p class="case-card__text">Dois sistemas: um para cadastrar o stencil e outro para imprimir a etiqueta. O código completo era digitado à mão, em um único campo.</p>
+              </div>
+              <div class="case-card">
+                <h3 class="case-card__title">Novo sistema</h3>
+                <p class="case-card__text">Um formulário com as características do stencil em campos separados. O sistema monta o código e gera a etiqueta com QR Code ao confirmar o cadastro.</p>
+              </div>
+            </div>
+            <div class="case-gap-28"></div>
+            <p class="case-text">Entendi como o código era montado e como os operadores faziam isso na prática, e transformei cada parte dele em um campo. A pessoa preenche o que sabe sobre o stencil, vê uma prévia do código e o sistema cuida do formato. Fica menos coisa para decorar e menos chance de errar.</p>
+            <div class="case-gap-20"></div>
+            <p class="case-text">Também cronometramos o cadastro nos dois sistemas.</p>
+            <div class="case-gap-24"></div>
+            <div class="case-metrics">
+              <div class="case-metric">
+                <div class="case-metric__group">
+                  <p class="case-summary__label">Sistema legado</p>
+                  <div class="case-metric__row"><span class="case-metric__row-label">Cadastro</span><span class="case-metric__value">2 min 04 s</span></div>
+                  <div class="case-metric__row"><span class="case-metric__row-label">Impressão da etiqueta</span><span class="case-metric__value">não medida</span></div>
+                </div>
+                <div class="case-metric__total"><span class="case-metric__total-label">Só o cadastro</span><span class="case-metric__total-value">2 min 04 s</span></div>
+              </div>
+              <div class="case-metric">
+                <div class="case-metric__group">
+                  <p class="case-summary__label">Novo sistema</p>
+                  <div class="case-metric__row"><span class="case-metric__row-label">Cadastro + impressão da etiqueta</span><span class="case-metric__value">1 min 50 s</span></div>
+                </div>
+                <div class="case-metric__total"><span class="case-metric__total-label">Processo inteiro</span><span class="case-metric__total-value">1 min 50 s</span></div>
+              </div>
+            </div>
+            <div class="case-gap-28"></div>
+            <p class="case-text">No novo sistema, o processo inteiro, do cadastro à impressão da etiqueta, levou menos tempo do que só o cadastro no sistema legado. Lá, a etiqueta era impressa em outro sistema e esse tempo não entrou na medição.</p>
+            <div class="case-gap-28"></div>
+            <div class="case-placeholder" style="--h-desk: 536px; --h-mob: 214px;" role="img" aria-label="Formulário de cadastro com prévia do código e etiqueta gerada">[Formulário de cadastro com prévia do código e etiqueta gerada]</div>
+            <div class="case-gap-12"></div>
+            <p class="case-caption">Fig. 04 — Cadastro estruturado e etiqueta gerada automaticamente</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 Resultados -->
+      <section class="case-section" aria-labelledby="c2-resultados">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">07</span>
+            <h2 class="case-section__title" id="c2-resultados">Resultados</h2>
+          </div>
+          <div class="case-section__body">
+            <p class="case-text">O ciclo do stencil passou a ter um responsável por etapa e um registro novo, o de saída. Os únicos números que temos são as duas cronometragens acima.</p>
+            <div class="case-gap-40"></div>
+            <h3 class="case-heading">Principais entregas</h3>
+            <div class="case-gap-16"></div>
+            <div class="case-deliveries">
+              <p class="case-delivery">Perfis e responsabilidades: Operação, Controle de Qualidade e Engenharia</p>
+              <p class="case-delivery">Registro de lavagem e novo registro de saída</p>
+              <p class="case-delivery">Validação inicial e revalidação por avaria pelo Controle de Qualidade</p>
+              <p class="case-delivery">Cadastro estruturado com código e etiqueta gerados pelo sistema</p>
+              <p class="case-delivery">Históricos de movimentações e de vistorias</p>
+              <p class="case-delivery">Acompanhamento de vida útil por ciclos</p>
+              <p class="case-delivery">Dois testes com usuários</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 Aprendizados -->
+      <section class="case-section case-section--final" aria-labelledby="c2-aprendizados">
+        <div class="case-section__grid">
+          <div class="case-section__head">
+            <span class="case-section__num">08</span>
+            <h2 class="case-section__title" id="c2-aprendizados">Aprendizados</h2>
+          </div>
+          <div class="case-section__body">
+            <p class="case-text">Todo registro novo custa tempo para quem opera. O primeiro teste mostrou que não bastava a etapa existir: ela precisava dar pouco trabalho.</p>
+            <div class="case-gap-20"></div>
+            <p class="case-text">Detalhes como reconhecer a etapa pela etiqueta ou preencher um nome sozinho fazem diferença para quem repete esse registro todo dia.</p>
+            <div class="case-gap-32"></div>
+            <p class="case-note">Métodos: user flows, regras de comportamento, prototipação, testes com usuários · Ferramentas: Figma, FigJam, shadcn/ui (Obra Kit), Notion</p>
+            <div class="case-end">
+              <a class="case-back" href="../index.html#projetos">
+                <img src="../assets/icons/link-back.svg" alt="" width="16" height="16" aria-hidden="true">
+                Todos os projetos
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">Paula Almeida · Product Designer</p>
+    <p class="site-footer__text site-footer__year">© 2026</p>
+    <a class="site-footer__top" href="#topo">
+      Voltar ao topo
+      <img src="../assets/icons/desktop-arrow-up.svg" alt="" width="12" height="12" aria-hidden="true">
+    </a>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
